@@ -38,8 +38,8 @@ class Student
   def self.create(name:, grade:)
     @name = name
     @grade = grade
-    binding.pry
-    save
+    student = Student.new(@name, @grade)
+    student.save
   end
 
 
