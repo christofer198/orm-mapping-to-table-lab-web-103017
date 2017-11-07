@@ -27,5 +27,6 @@ class Student
           Drop table if exists students
           SQL
     DB[:conn].execute(sql)
-          
+  end
+
 end
