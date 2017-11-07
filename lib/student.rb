@@ -34,4 +34,11 @@ class Student
     @id = DB[:conn].execute("SELECT id from students where name='#{self.name}'").flatten.join.to_i
   end
 
+  def self.create(name:, grade:)
+    @name = name
+    @grade = grade
+    save
+  end
+    
+
 end
