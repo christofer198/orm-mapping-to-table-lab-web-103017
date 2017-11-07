@@ -39,6 +39,6 @@ class Student
     @grade = grade
     save
   end
-    
+
 
 end
