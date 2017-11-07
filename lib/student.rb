@@ -40,6 +40,7 @@ class Student
     @grade = grade
     student = Student.new(@name, @grade)
     student.save
+    student
   end
 
 
