@@ -4,7 +4,7 @@ class Student
   #  with DB[:conn]
   attr_reader :id
   attr_accessor :name, :grade
-  
+
   def initialize(name, grade, id=nil)
     @name = name
     @grade = grade
@@ -22,4 +22,10 @@ class Student
     DB[:conn].execute(sql)
   end
 
+  def self.drop_table
+    sql = <<-SQL
+          Drop table if exists students
+          SQL
+    DB[:conn].execute(sql)
+          
 end
