@@ -32,7 +32,7 @@ class Student
   def save
     if @id == nil
       id = @id
-    else
+    end
     DB[:conn].execute("insert into students (name, grade) values ('#{self.name}', '#{self.grade}')")
   end
 
