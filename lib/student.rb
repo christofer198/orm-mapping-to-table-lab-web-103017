@@ -30,7 +30,7 @@ class Student
   end
 
   def save
-    DB[:conn].execute("insert into students (name, grade) values (#{self.id}, '#{self.name}', #{self.grade})")
+    DB[:conn].execute("insert into students (name, grade) values ('#{self.name}', #{self.grade})")
   end
 
 end
